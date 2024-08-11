@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInTop {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInBottom {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-top {
+            animation: fadeInTop 1s ease-out forwards;
+        }
+        .animate-fade-in-bottom {
+            animation: fadeInBottom 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-serif">
+    <div class="container mx-auto">
+        <!-- Cover Section -->
+        <section id="cover" class="min-h-screen flex items-center justify-center bg-white">
+            <div class="text-center p-4 relative">
+                <div class="absolute top-0 left-0 w-16 h-16 opacity-50 rounded-tl-lg"></div>
+                <div class="absolute top-0 right-0 w-16 h-16  opacity-50 rounded-tr-lg"></div>
+                
+                <p class="text-lg mb-4 animate-fade-in-top opacity-0">19.08.22</p>
+                
+                <div class="my-6 animate-fade-in-top opacity-0" style="animation-delay: 0.2s;">
+                    <img src="happy-wedding.png" alt="Wedding Illustration" class="mx-auto h-[200px] rounded-full border-4 border-yellow-200">
+                </div>
+                
+                <h2 class="text-2xl font-bold mb-2 animate-fade-in-bottom opacity-0" style="animation-delay: 0.4s;">The Wedding of</h2>
+                <p class="text-3xl font-bold text-yellow-600 mb-6 animate-fade-in-bottom opacity-0" style="animation-delay: 0.6s;">Wumbo & Wumbi</p>
+                
+                <p class="mb-4 text-gray-600 animate-fade-in-bottom opacity-0" style="animation-delay: 0.8s;">Kepada Yth:<br>Bapak/Ibu/Saudara/i</p>
+                <p class="text-xl font-semibold mb-6 animate-fade-in-bottom opacity-0" style="animation-delay: 1s;" id="guest">-</p>
+                
+                <button class="bg-yellow-500 text-white px-6 py-2 rounded-full font-bold animate-fade-in-bottom opacity-0" style="animation-delay: 1.2s;">Buka Undangan</button>
+            </div>
+        </section>
+
+        <!-- Couple Section -->
+        <section id="couple" class="min-h-screen flex items-center justify-center bg-yellow-50">
+            <div class="text-center p-4">
+                <h2 class="text-3xl font-bold mb-8 text-yellow-600">Mempelai</h2>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-16">
+                    <div>
+                        <img src="https://source.unsplash.com/random/150x150?bride" alt="Bride" class="mx-auto rounded-full border-4 border-yellow-200 mb-4">
+                        <h3 class="text-xl font-semibold">Bride's Name</h3>
+                        <p class="text-gray-600">Daughter of Mr. & Mrs. ...</p>
+                    </div>
+                    <div class="text-5xl text-yellow-500">&</div>
+                    <div>
+                        <img src="https://source.unsplash.com/random/150x150?groom" alt="Groom" class="mx-auto rounded-full border-4 border-yellow-200 mb-4">
+                        <h3 class="text-xl font-semibold">Groom's Name</h3>
+                        <p class="text-gray-600">Son of Mr. & Mrs. ...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Time Section -->
+        <section id="time" class="min-h-screen flex items-center justify-center bg-white">
+            <div class="text-center p-4">
+                <h2 class="text-3xl font-bold mb-8 text-yellow-600">Waktu & Tempat</h2>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Akad Nikah</h3>
+                        <p class="text-gray-600">Sabtu, 19 Agustus 2022</p>
+                        <p class="text-gray-600">08:00 WIB - Selesai</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Resepsi</h3>
+                        <p class="text-gray-600">Sabtu, 19 Agustus 2022</p>
+                        <p class="text-gray-600">11:00 WIB - Selesai</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Lokasi</h3>
+                        <p class="text-gray-600">Gedung Pernikahan Indah</p>
+                        <p class="text-gray-600">Jl. Cinta Sejati No. 123, Kota Bahagia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quotes Section -->
+        <section id="quotes" class="min-h-screen flex items-center justify-center bg-yellow-50">
+            <div class="text-center p-4">
+                <h2 class="text-3xl font-bold mb-8 text-yellow-600">Quotes</h2>
+                <blockquote class="text-xl italic text-gray-700 mb-8">
+                    "A successful marriage requires falling in love many times, always with the same person."
+                </blockquote>
+                <p class="text-gray-600">- Mignon McLaughlin</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fixed Bottom Menu -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg">
+        <div class="flex justify-around py-4">
+            <a href="#cover" class="text-center" onclick="active('cover')">
+                <div id="cover-menu" class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-1">
+                    <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                </div>
+                <span class="text-xs text-gray-600">Cover</span>
+            </a>
+            <a href="#couple" class="text-center" onclick="active('couple')">
+                <div id="couple-menu" class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-1">
+                    <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                </div>
+                <span class="text-xs text-gray-600">Mempelai</span>
+            </a>
+            <a href="#time" class="text-center" onclick="active('time')">
+                <div id="time-menu" class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-1">
+                    <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <span class="text-xs text-gray-600">Waktu</span>
+            </a>
+            <a href="#quotes" class="text-center" onclick="active('quotes')">
+                <div id="quotes-menu" class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-1">
+                    <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                </div>
+                <span class="text-xs text-gray-600">Quotes</span>
+            </a>
+        </div>
+    </div>
+    <script>
+        function active(id) {
+            document.querySelectorAll('[id*="-menu"]').forEach(function(e) {
+                e.classList.remove('bg-yellow-100');
+                e.querySelector('svg').classList.remove('text-yellow-600');
+                e.classList.add('bg-gray-100');
+                e.querySelector('svg').classList.add('text-gray-600');
+            })
+
+            document.getElementById(id + '-menu').classList.remove('bg-gray-100');
+            document.getElementById(id + '-menu').classList.add('bg-yellow-100');
+            document.getElementById(id + '-menu').querySelector('svg').classList.remove('text-gray-600');
+            document.getElementById(id + '-menu').querySelector('svg').classList.add('text-yellow-600');
+        }
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const name = urlParams.get('name');
+        console.log(urlParams)
+        console.log(name);
+        document.getElementById('guest').innerText = name;
+
+    </script>
+</body>
+</html>
